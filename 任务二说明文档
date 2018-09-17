@@ -1,0 +1,46 @@
+数据集：
+iyear               113247 non-null int64
+imonth              113247 non-null int64
+iday                113247 non-null int64
+country_txt         113247 non-null object
+region_txt          113247 non-null object
+latitude            113247 non-null float64
+longitude           113247 non-null float64
+specificity         113247 non-null float64
+attacktype1_txt     113247 non-null object
+targtype1_txt       113247 non-null object
+targsubtype1_txt    113247 non-null object
+natlty1_txt         113247 non-null object
+gname               113247 non-null object
+nperpcap            113247 non-null float64
+weaptype1_txt       113247 non-null object
+weapsubtype1_txt    113247 non-null object
+nkill               113247 non-null float64
+nkillus             113247 non-null float64
+nkillter            113247 non-null float64
+nwound              113247 non-null float64
+nwoundus            113247 non-null float64
+nwoundte            113247 non-null float64
+extended_txt        113247 non-null object
+vicinity_txt        113247 non-null object
+crit1_txt           113247 non-null object
+crit2_txt           113247 non-null object
+crit3_txt           113247 non-null object
+doubtterr_txt       113247 non-null object
+multiple_txt        113247 non-null object
+success_txt         113247 non-null object
+suicide_txt         113247 non-null object
+guncertain1_txt     113247 non-null object
+individual_txt      113247 non-null object
+claimed_txt         113247 non-null object
+property_txt        113247 non-null object
+ishostkid_txt       113247 non-null object
+INT_LOG_txt         113247 non-null object
+INT_IDEO_txt        113247 non-null object
+INT_MISC_txt        113247 non-null object
+INT_ANY_txt         113247 non-null object
+标签：
+gname(152个种类）
+
+模型（监督学习）：
+多层感知机（浅层神经网络）来预测gname(恐怖组织名字，有些样本是unknown,有些是known），带known标签的作为训练集，训练好的模型在测试集上的准确率达到87%，说明训练的模型确实对unknown数据由很好的预测能力，可以预测出表二2017年给的数据。由于感知机最后一层输出的是类别的概率分布，可以直接输出top5的可能性。
